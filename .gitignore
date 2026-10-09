@@ -3,7 +3,6 @@
 
 # Python
 .venv/
-arc_env
 __pycache__/
 *.pyc
 
@@ -21,3 +20,6 @@ reference/
 .DS_Store
 .idea/
 .vscode/
+
+arc_env/
+arc-env/
