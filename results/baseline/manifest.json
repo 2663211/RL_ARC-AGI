@@ -1,0 +1,87 @@
+{
+  "started": "2026-10-26 23:33:43",
+  "argv": [
+    "scripts/eval_agents.py",
+    "--variant",
+    "random_obj:ARC_MODE=random,ARC_ACTION_SPACE=object",
+    "--variant",
+    "random_obj_mem:ARC_MODE=random,ARC_ACTION_SPACE=object,ARC_MEMORY=1",
+    "--variant",
+    "dqn_obj_mem:ARC_MODE=dqn,ARC_ACTION_SPACE=object,ARC_MEMORY=1",
+    "--variant",
+    "dqn_mem:ARC_MODE=dqn,ARC_MEMORY=1",
+    "--seeds",
+    "0,1,2",
+    "--max-steps",
+    "500",
+    "--out",
+    "results/baseline",
+    "--resume"
+  ],
+  "split": "dev",
+  "games": [
+    "ls20",
+    "ft09",
+    "s5i5",
+    "sb26",
+    "bp35"
+  ],
+  "dev_games": [
+    "ls20",
+    "ft09",
+    "s5i5",
+    "sb26",
+    "bp35"
+  ],
+  "heldout_games": [
+    "g50t",
+    "vc33",
+    "cn04",
+    "m0r0",
+    "dc22"
+  ],
+  "split_seed": 0,
+  "variants": {
+    "random_obj": {
+      "ARC_MODE": "random",
+      "ARC_ACTION_SPACE": "object"
+    },
+    "random_obj_mem": {
+      "ARC_MODE": "random",
+      "ARC_ACTION_SPACE": "object",
+      "ARC_MEMORY": "1"
+    },
+    "dqn_obj_mem": {
+      "ARC_MODE": "dqn",
+      "ARC_ACTION_SPACE": "object",
+      "ARC_MEMORY": "1"
+    },
+    "dqn_mem": {
+      "ARC_MODE": "dqn",
+      "ARC_MEMORY": "1"
+    }
+  },
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "max_steps": 500,
+  "checkpoints": [
+    100,
+    250,
+    500
+  ],
+  "versions": {
+    "python": "3.12.3",
+    "arc-agi": "0.9.9",
+    "arcengine": "0.9.3",
+    "numpy": "2.5.3",
+    "torch": "2.14.1+cpu",
+    "cuda": false,
+    "gpu": null,
+    "cpu": "x86_64",
+    "cpu_count": 8
+  },
+  "note": "local scores from the unmodified arc_agi scorecard; not Kaggle scores"
+}
